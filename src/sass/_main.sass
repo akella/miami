@@ -1,3 +1,290 @@
-.block
+.container
+	margin: 0 auto
+	max-width: 940px
+	+clr
+	+r(980)
+		margin: 0 20px 
+
+
+.hero
+	
+	background-size: cover 
+	background-position: 50% 100% 
+	background-repeat: no-repeat
+	position: relative
+	&:before
+		+r(720)
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0   
+			background: rgba(#000,.5)   
+			content: "" 
+	.container
+		position: relative
+		height: 100vh
+		min-height: 500px  
+.header
+	position: absolute
+	top: 100px 
+	left: 0
+	right: 0  
+	+r(720)
+		top: 30px 
+	&__logo
+		position: absolute
+		top: -46px 
+		left: 50%
+		transform: translate(-50%,0) 
+		+r(720)
+			left: 0
+			transform: none
+			top: 0  
+		.icon
+			font-size: 80px 
+			fill: #fff
+			+r(720)
+				font-size: 60px 
+	&__phone
+		float: left
+		text-decoration: none
+		color: #fff
+		opacity: 0.6 
+		+r(720)
+			float: right
+			margin-bottom: 10px 
+			padding-top: 10px 
+	&__call
+		float: right
+		text-decoration: none
+		color: #fff
+		border-bottom: 1px dashed #fff 
+		opacity: 0.6
+		text-transform: uppercase
+		+r(720)
+			clear: right
+.nav
+	position: absolute
+	bottom: 60px 
+	left: 0
+	right: 0
 	display: flex
-	// remove this
+	flex-direction: row
+	justify-content: space-between
+	+r(720)
+		position: static
+		display: block
+		padding-top: 200px 
+	a
+		text-transform: uppercase
+		color: #fff 
+		text-decoration: none
+		font-weight: 600 
+	li
+		+r(720)
+			margin-bottom: 10px 
+			text-align: center
+			font-size: 25px 
+
+
+.wrapper
+	background: #fff
+	position: relative
+	z-index: 200
+	box-shadow: 0 0 10px rgba(#000,.5)
+body
+	padding-bottom: 540px 
+.footer
+	height: 540px 
+	background-repeat: no-repeat 
+	background-size: cover 
+	background-position: 50% 50%
+	position: fixed
+	bottom: 0
+	z-index: 100
+	left: 0
+	right: 0    
+	&__logo
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		font-size: 78px 
+		.icon
+			fill: #fff
+	&__copy
+		text-transform: uppercase
+		color: #fff 
+		text-align: center
+		font-size: 16px 
+		bottom: 66px 
+		left: 0
+		right: 0  
+		position: absolute
+
+
+
+.section
+	padding: 130px 0 
+	position: relative
+	+r(760)
+		padding: 60px 0 
+	&__bottom
+		text-align: center
+		margin-top: 30px 
+	&:nth-child(odd)
+		background: #eeeeee 
+	&__left
+		float: left
+		width: 50% 
+		+r(720)
+			float: none
+			width: auto
+			margin-bottom: 30px 
+	&__right
+		float: right
+		width: 33% 
+		+r(720)
+			float: none
+			width: auto
+	&__title
+		position: absolute
+		left: 50%
+		top: -.5em  
+		transform: translate(-50%,0)
+		font-size: 48px 
+		font-weight: 100
+		color: #000  
+		padding-bottom: 14px 
+		text-transform: uppercase
+		line-height: 1 
+		+r(600)
+			position: relative
+			top: 0
+			left: 0
+			transform: none
+			margin-bottom: 40px  
+			font-size: 30px  
+			text-align: center
+		.icon
+			position: absolute
+			bottom: 0
+			font-size: 13px  
+			fill: #00a7eb
+			margin-bottom: -11px 
+			left: 50%
+			transform: translate(-50%,0) 
+		&:after,&:before
+			content: "" 
+			width: calc(50% - 20px) 
+			position: absolute
+			height: 2px 
+			background: #1cabec 
+			bottom: 0 
+		&:before
+			left: 0
+		&:after
+			right: 0 
+.best
+	&__motto
+		float: left
+		width: 33% 
+		font-size: 48px 
+		text-transform: uppercase
+		font-weight: 100 
+		+r(960)
+			width: auto
+			float: none
+			margin-bottom: 20px 
+			br
+				display: none
+		strong
+			font-weight: 600
+		span
+			font-weight: 100 
+			color: #1dabec 
+	&__text
+		float: right
+		width: 66% 
+		+r(960)
+			width: auto
+			float: none
+
+.apart
+	margin-bottom: 30px 
+	h2
+		font-weight: 600
+		font-size: 16px 
+		span
+			font-weight: 300
+			color: #1cabec  
+	&__photos
+		display: flex
+		margin-bottom: 12px 
+	&__photo
+		height: 260px 
+		background-size: cover 
+		background-position: 50% 50%
+		background-repeat: no-repeat  
+		flex: 1
+		+r(720)
+			height: 100px 
+		&:first-child
+			margin-right: 20px
+	&_mod-right &__photo
+		&:first-child
+			flex: 2
+	&_mod-left &__photo
+		&:last-child
+			flex: 2
+
+.testis
+	display: flex
+	justify-content: space-between
+	+r(930)
+		display: block
+.t
+	text-align: center
+	padding: 0 2% 
+	+r(930)
+		margin-bottom: 30px 
+	&__photo
+		height: 150px 
+		width: 150px 
+		border-radius: 50%
+		background-size: cover
+		background-position: 50% 50%
+		background-repeat: no-repeat   
+		display: inline-block 
+		position: relative
+		&:before
+			content:  " "
+			position: absolute
+			left: -35px
+			top: 50%
+			margin-top: -15px  
+			width: 40px 
+			height: 40px 
+			background-position: 0 0
+			background-size: contain
+			background-image: url(data:image/png;base64,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) 
+	&__name
+		margin-top: 10px 
+		font-weight: bold
+		font-size: 16px 
+		color: #000 
+	&__position
+		font-style: italic
+		font-size: 16px 
+		color: #696973 
+		margin-top: 5px 
+	&__descr
+		line-height: 1.37
+		font-size: 16px  
+		text-align: center
+		color: #000 
+		margin-top: 25px 
+
+
+
